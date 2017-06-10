@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFrame>
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +15,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+    QFrame* boardFrame;
 
 private:
     Ui::MainWindow *ui;
