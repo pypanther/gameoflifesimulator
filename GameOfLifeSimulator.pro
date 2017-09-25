@@ -8,17 +8,36 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = GameOfLifeSimulator
 TEMPLATE = app
 
+CONFIG(release, debug|release) {
+    buildConfig = release
+}
+CONFIG(debug, debug|release) {
+    buildConfig = debug
+}
 
-SOURCES += main.cpp\
-        mainwindow.cpp\
-        cell.cpp\
-        board.cpp
+DESTDIR = bin/$${buildConfig}
+TARGET = GameOfLifeSimulator
 
-HEADERS  += mainwindow.h\
-            cell.h\
-            board.h
+INCLUDEPATH += include
 
-FORMS    += mainwindow.ui
+OBJECTS_DIR = build/objects/$${buildConfig}
+
+MOC_DIR = build/moc/$${buildConfig}
+
+UI_DIR = build/ui/$${buildConfig}
+
+SOURCES += \
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/cell.cpp \
+    src/board.cpp
+
+HEADERS += \
+    include/mainwindow.h \
+    include/cell.h \
+    include/board.h
+
+FORMS += \
+    ui/mainwindow.ui
