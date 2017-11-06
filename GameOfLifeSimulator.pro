@@ -17,27 +17,27 @@ CONFIG(debug, debug|release) {
     buildConfig = debug
 }
 
-DESTDIR = bin/$${buildConfig}
-TARGET = GameOfLifeSimulator
+DESTDIR = $${PWD}/bin/$${buildConfig}
+TARGET = $${PWD}/GameOfLifeSimulator
 
-INCLUDEPATH += include
+INCLUDEPATH += $${PWD}/include
 
-OBJECTS_DIR = build/objects/$${buildConfig}
+OBJECTS_DIR = $${PWD}/build/objects/$${buildConfig}
 
-MOC_DIR = build/moc/$${buildConfig}
+MOC_DIR = $${PWD}/build/moc/$${buildConfig}
 
-UI_DIR = build/ui/$${buildConfig}
+UI_DIR = $${PWD}/build/ui/$${buildConfig}
 
 SOURCES += \
-    src/main.cpp \
-    src/mainwindow.cpp \
-    src/cell.cpp \
-    src/board.cpp
+    $${PWD}/src/main.cpp \
+    $${PWD}/src/mainwindow.cpp \
+    $${PWD}/src/cell.cpp \
+    $${PWD}/src/board.cpp
 
 HEADERS += \
-    include/mainwindow.h \
-    include/cell.h \
-    include/board.h
+    $${PWD}/include/mainwindow.h \
+    $${PWD}/include/cell.h \
+    $${PWD}/include/board.h
 
 FORMS += \
-    ui/mainwindow.ui
+    $${PWD}/ui/mainwindow.ui
