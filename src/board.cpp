@@ -90,6 +90,8 @@ int Board::getVerticalCellSize() const
 
 void Board::paintEvent(QPaintEvent* event)
 {
+    Q_UNUSED(event)
+
     QPainter painter(this);    
     painter.drawRect(0, 0, width(), height());
 }

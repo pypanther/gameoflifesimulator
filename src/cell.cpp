@@ -29,6 +29,8 @@ int Cell::getHeight() const
 
 void Cell::paintEvent(QPaintEvent* event)
 {
+    Q_UNUSED(event)
+
     QPainter painter(this);
     painter.setPen(QPen(outlineColor, 1, Qt::SolidLine, Qt::FlatCap));
     painter.setBrush(QBrush(backgroundColor, Qt::SolidPattern));

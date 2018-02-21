@@ -1,3 +1,14 @@
+# Generated folders
+bin/**
+build/**
+
+# User-specific project file settings
+*.pro.user*
+
+# Makefiles
+Makefile*
+makefile*
+
 # Compiled Object files
 *.slo
 *.lo
